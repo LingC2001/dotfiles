@@ -66,15 +66,11 @@ Install Oh My Posh:
 winget install JanDeDobbeleer.OhMyPosh -s winget
 ```
 
-Place your theme (e.g., `catppuccin_macchiato.omp.json`) in a config directory:
-
-```
-C:\Users\<YourUsername>\.ompconfig\
-```
+Place your theme (e.g., `catppuccin_macchiato.omp.json`) in a config directory of your choice (e.g., `~/.ompconfig/`)
 
 Add to your PowerShell profile (`code $PROFILE`):
 
 ```powershell
-oh-my-posh init pwsh --config "C:\Users\<YourUsername>\.ompconfig\catppuccin_macchiato.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "~\.ompconfig\catppuccin_macchiato.omp.json" | Invoke-Expression
 ```
 
