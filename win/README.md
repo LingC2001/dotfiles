@@ -98,7 +98,7 @@ You can find presets here: https://starship.rs/presets/
 Add to your PowerShell profile (`code $PROFILE`):
 
 ```powershell
-Invoke-Expression ($starship init powershell)
+Invoke-Expression (&starship init powershell)
 ```
 
 #### Ubuntu (WSL2):
