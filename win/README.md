@@ -4,8 +4,10 @@ This repository contains example configurations to set up a pleasant Windows ter
 
 ## Prerequisites
 
-- Windows 10 or 11 with admin privileges
 - `winget` (Windows Package Manager)
+- `pwsh` (Powershell 7) `winget install --id Microsoft.PowerShell --source winget`
+- VS Code `winget install -e --id Microsoft.VisualStudioCode`
+- Docker Desktop `winget install -e --id Docker.DockerDesktop`
 
 ## 1. Install GlazeWM
 
@@ -31,7 +33,7 @@ winget install --id Microsoft.PowerToys --source winget
 - Set App Launcher to `Alt+Space`
 - Optionally bind copy/paste to `Alt+C` / `Alt+V`
 
-## 3. Windows Terminal: Color Schemes & Themes
+## 3. Windows Terminal
 
 1. Open Windows Terminal settings (`Ctrl + ,` or via `settings.json`)
 2. Paste your chosen `*.scheme.json` into the `schemes` section
@@ -49,6 +51,8 @@ winget install --id Microsoft.PowerToys --source winget
 ```
 
 See `terminal/setting.json.example` for a full example.
+
+5. Bind `Alt + t` to open a new tab (set default as Ubuntu later), and set `Ctrl + t` to open a windows powershell 7 tab.
 
 ## 4. Nerd Fonts
 
@@ -74,3 +78,32 @@ Add to your PowerShell profile (`code $PROFILE`):
 oh-my-posh init pwsh --config "~\.ompconfig\catppuccin_macchiato.omp.json" | Invoke-Expression
 ```
 
+## 6. WSL2
+
+In powershell, install wsl2 via command:
+
+```powershell
+wsl --install
+```
+
+Reboot the device and go to Microsoft Store and download the Ubuntu app.
+
+### VS Code Integration
+Install the VS Code WSL extension. (https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) <br> 
+This should now allow you to open directories directly in WSL environment using `code .`
+
+### Docker Integration
+Open Docker Desktop and ensure that in `settings > general > enable WSL2 based engine` is enabled. <br>
+Ensure `settings > resources > WSL2 integration` is enabled if the option is there <br>
+Add the WSL2 user to docker user group 
+
+```bash
+sudo groupadd docker
+sudo usermod -aG docker $USER
+```
+
+Now restart Docker and WSL, check if docker is working properly by running:
+
+```bash
+docker run hello-world
+```
