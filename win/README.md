@@ -98,6 +98,7 @@ You can find presets here: https://starship.rs/presets/
 Add to your PowerShell profile (`code $PROFILE`):
 
 ```powershell
+$ENV:STARSHIP_CONFIG = "~\.config\starship.toml"
 Invoke-Expression (&starship init powershell)
 ```
 
@@ -106,6 +107,7 @@ Invoke-Expression (&starship init powershell)
 Install Starship:
 
 ```bash
+export STARSHIP_CONFIG=~/.config/starship.toml
 curl -sS https://starship.rs/install.sh | sh
 ```
 
