@@ -9,7 +9,7 @@ export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 eval "$(starship init zsh)"
 
 # fuzzy find
-[-f ~/.fzf.zsh] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # zsh-autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh

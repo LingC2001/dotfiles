@@ -9,7 +9,7 @@ config.default_cursor_style = "BlinkingBar"
 config.cursor_thickness = 2
 config.cursor_blink_rate = 700
 config.colors = {
-    cursor_bg = "#FFFFFF"
+    cursor_bg = "#FFFFFF",
     cursor_border = "#FFFFFF"
 }
 
@@ -35,7 +35,7 @@ wezterm.on("update-status", function(window, pane)
     end
 
     -- cwd
-    local cwd pane:get_current_working_dir()
+    local cwd = pane:get_current_working_dir()
     if cwd then
         cwd = basename(cwd.file_path)
     else
