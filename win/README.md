@@ -21,6 +21,21 @@ Copy the provided GlazeWM/ZeBar configs from `.glzr/` into your user directory:
 C:\Users\<YourUsername>\.glzr\
 ```
 
+### Launch on Startup
+
+To make GlazeWM launch automatically on startup, add a registry entry:
+
+1. Open Registry Editor (`Win + R`, type `regedit`)
+2. Navigate to: `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run`
+3. Create a new item and set the value to the full path of `glazewm.exe` (e.g.  `C:\Program Files\glzr.io\GlazeWM\glazewm.exe`)
+
+Alternatively, use PowerShell:
+
+```powershell
+$glazewmPath = "C:\Program Files\glzr.io\GlazeWM\glazewm.exe"
+New-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run" -Name "GlazeWM" -Value $glazewmPath -Force
+```
+
 ## 2. WSL2
 
 In powershell, install wsl2 via command:
