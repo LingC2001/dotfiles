@@ -75,7 +75,7 @@ Install useful command-line tools and enhancements:
 brew install fzf zsh-autosuggestions zsh-syntax-highlighting zoxide bat eza yazi
 ```
 
-### Package Details:
+### Tool Details:
 
 - **fzf**: Fuzzy finder for fast searching through files and command history
 - **zoxide**: Smart directory jumper that learns your habits (z command)

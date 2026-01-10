@@ -150,9 +150,28 @@ Add to your PowerShell profile (`code $PROFILE`):
 oh-my-posh init pwsh --config "~\.ompconfig\catppuccin_macchiato.omp.json" | Invoke-Expression
 ```
 
+## 5. Useful CLI Tools
+
+Install useful command line tools/utilities.
+
+### Windows
+
+### Ubuntu (WSL2)
+```bash
+sudo apt install fzf fd-find bat zoxide eza
+```
+
+The use the supplied `.bashrc` to configure these tools.
+
+### Tool Details:
+
+- **fzf**: Fuzzy finder for fast searching through files and command history
+- **zoxide**: Smart directory jumper that learns your habits (z command)
+- **bat**: Cat clone with syntax highlighting and line numbers
+- **eza**: Modern replacement for ls with colors and icons
 
 
-## 5. PowerToys (optional)
+## 6. PowerToys (optional)
 
 Install PowerToys for App Launcher and other utilities:
 
