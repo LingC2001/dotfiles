@@ -67,22 +67,25 @@ cp .zshrc ~/.zshrc
 
 If you already have a `.zshrc`, merge the contents manually.
 
-## 5. Optional Recommended Packages
+## 5. Optional Recommended CLI Tools
 
 Install useful command-line tools and enhancements:
 
 ```bash
-brew install fzf zsh-autosuggestions zsh-syntax-highlighting yazi
+brew install fzf zsh-autosuggestions zsh-syntax-highlighting zoxide bat eza yazi
 ```
 
 ### Package Details:
 
 - **fzf**: Fuzzy finder for fast searching through files and command history
+- **zoxide**: Smart directory jumper that learns your habits (z command)
+- **bat**: Cat clone with syntax highlighting and line numbers
+- **eza**: Modern replacement for ls with colors and icons
 - **zsh-autosuggestions**: Auto-suggests commands as you type based on history
 - **zsh-syntax-highlighting**: Syntax highlighting for the Zsh shell
 - **yazi**: Blazing fast terminal file manager written in Rust
 
-After installation, you may need to add them to your `.zshrc`. The provided `.zshrc` should already include configurations for these tools.
+After installation, you may need to add them to your `.zshrc`. The provided `.zshrc` already includes configurations for all of these tools.
 
 ## Notes
 
