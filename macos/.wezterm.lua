@@ -1,5 +1,6 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
+local act = wezterm.action
 
 -- General
 config.font_size = 14.0
@@ -83,6 +84,26 @@ config.keys = {
         key = "d",
         mods = "CMD|SHIFT",
         action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+    },
+    {
+        key = "LeftArrow",
+        mods = "ALT",
+        action = act.SendKey({ key = "b", mods = "ALT" }),
+    },
+    {
+        key = "RightArrow",
+        mods = "ALT",
+        action = act.SendKey({ key = "f", mods = "ALT" }),
+    },
+    {
+        key = "UpArrow",
+        mods = "ALT",
+        action = act.SendKey({ key = "a", mods = "CTRL" }),
+    },
+    {
+        key = "DownArrow",
+        mods = "ALT",
+        action = act.SendKey({ key = "e", mods = "CTRL" }),
     },
     {
         key = "1",
