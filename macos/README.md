@@ -37,6 +37,8 @@ Copy the provided `.wezterm.lua` configuration to:
 ~/.wezterm.lua
 ```
 
+Download and apply the cleaner `wezterm.icns` icon by going to `Finder -> Applications -> Get Info`. 
+
 ## 3. Install Starship
 
 Starship is a minimal, blazingly fast, and infinitely customizable shell prompt.
