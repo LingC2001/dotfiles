@@ -68,8 +68,13 @@ alias rf='source ~/.bashrc'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
+alias gpr='git pull --rebase'
 alias gp='git push'
 alias gl='git log --oneline --graph --decorate'
+alias gb='git branch'
+alias gco='git checkout'
+alias grb='git rebase'
+alias gcl='git pull -p && git branch -vv | grep "gone]" | awk '"'"'{print $1}'"'"' | xargs git branch -D'
 
 # ===================================================
 # Environment Variables
