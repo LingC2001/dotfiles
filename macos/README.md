@@ -50,7 +50,7 @@ brew install starship
 Copy the provided `starship.toml` to:
 
 ```
-~/.config/starship.toml
+~/.config/starship/starship.toml
 ```
 
 Add the initialization to your shell configuration. For Zsh, add to `~/.zshrc`:
@@ -74,7 +74,7 @@ If you already have a `.zshrc`, merge the contents manually.
 Install useful command-line tools and enhancements:
 
 ```bash
-brew install fzf zsh-autosuggestions zsh-syntax-highlighting zoxide bat eza yazi
+brew install fzf zsh-autosuggestions zsh-syntax-highlighting zoxide bat eza yazi git-delta helix
 ```
 
 ### Tool Details:
@@ -86,6 +86,8 @@ brew install fzf zsh-autosuggestions zsh-syntax-highlighting zoxide bat eza yazi
 - **zsh-autosuggestions**: Auto-suggests commands as you type based on history
 - **zsh-syntax-highlighting**: Syntax highlighting for the Zsh shell
 - **yazi**: Blazing fast terminal file manager written in Rust
+- **git-delta**: Cool diff viewing tool, combined with fzf via the .local/bin/gd script
+- **helix**: Primary vim-like editor
 
 After installation, you may need to add them to your `.zshrc`. The provided `.zshrc` already includes configurations for all of these tools.
 
