@@ -74,7 +74,7 @@ If you already have a `.zshrc`, merge the contents manually.
 Install useful command-line tools and enhancements:
 
 ```bash
-brew install fzf zsh-autosuggestions zsh-syntax-highlighting zoxide bat eza yazi git-delta helix
+brew install fzf zsh-autosuggestions zsh-syntax-highlighting zoxide bat eza yazi git-delta
 ```
 
 ### Tool Details:
@@ -87,12 +87,24 @@ brew install fzf zsh-autosuggestions zsh-syntax-highlighting zoxide bat eza yazi
 - **zsh-syntax-highlighting**: Syntax highlighting for the Zsh shell
 - **yazi**: Blazing fast terminal file manager written in Rust
 - **git-delta**: Cool diff viewing tool, combined with fzf via the .local/bin/gd script
-- **helix**: Primary vim-like editor
 
 After installation, you may need to add them to your `.zshrc`. The provided `.zshrc` already includes configurations for all of these tools.
 
-## Notes
+## 6. Helix Editor
 
-- Make sure you have a Nerd Font installed for proper icon display in Starship and Wezterm
-- Download Nerd Fonts from: https://github.com/ryanoasis/nerd-fonts/releases
-- After making configuration changes, reload your shell: `exec zsh`
+Install the Helix Editor, which is a modal editor like Vim (except you select first, and then action).
+
+```bash
+brew install helix
+```
+Open the config file within Helix via `:config-open`
+Copy the provided Helix config to the config file, so that Helix is configured to use Yazi.
+
+Download the LSPs you need:
+
+```bash
+brew install python-lsp-server
+npm install -g bash-language-server
+npm install -g typescript typescript-language-server
+go install golang.org/x/tools/golsp@latest
+```
